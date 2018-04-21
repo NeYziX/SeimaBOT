@@ -41,7 +41,7 @@ bot.on('message', message => {
         if(spliteMessage[0] === ";help") {
             message.channel.send("Liste des commandes envoyées en privée.");
             message.author.createDM().then(channel => {
-                channel.send('**⇩ Liste des commandes ⇩: \n \n __§help :__ \n Pour afficher la liste les commandes \n \n __§info :__ \n Pour afficher les informations du Discord \n \n __§ping :__ \n pour afficher la latence du bot \n \n __§socialmedia | §sm :__ \n Pour afficher les réseaux sociaux de PastelWorld \n \n __§avatar :__ \n Pour voir un avatar en mode GRAND FORMAT \n \n __§créateur :__ \n Pour afficher le site du créateur** \n \n _© NeYziX | Tous droits réservés_');
+                channel.send('**⇩ Liste des commandes ⇩: \n \n __;help :__ \n Pour afficher la liste les commandes \n \n __;info :__ \n Pour afficher les informations du Discord \n \n __;ping :__ \n pour afficher la latence du bot \n \n __;socialmedia | ;sm :__ \n Pour afficher les réseaux sociaux de Seima-Network \n \n __;avatar :__ \n Pour voir un avatar en mode GRAND FORMAT \n \n __;créateur :__ \n Pour afficher le site du créateur** \n \n _© NeYziX | Tous droits réservés_');
             }).catch(console.error);
         bot.channels.get('437294879853248532').send("Commande ;help utilisée par : " + message.author.username);
         }             
@@ -65,7 +65,7 @@ bot.on('message', message => {
         .addField("Tu as rejoint le :", message.member.joinedAt)
         .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
         .addField("ID :", "403989383423721472")
-        .setFooter("©NeYziX | Tous droits réservés.")
+        .setFooter("© NeYziX | Tous droits réservés.")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
     }
@@ -77,7 +77,7 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
         .setDescription("Pour visiter le site du créateur :")
         .addField("Lien :", "http://xrainbow.000webhostapp.com")
-        .setFooter("©NeYziX | Tous droits réservés.")
+        .setFooter("© NeYziX | Tous droits réservés.")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
     }
@@ -92,7 +92,7 @@ bot.on('message', message => {
         .addField("Twitter :", "Bientôt") 
         .addField("Facebook :", "Bientôt") 
         .addField("Instagram :", "Bientôt") 
-        .setFooter("©NeYziX | Tous droits réservés.")
+        .setFooter("© NeYziX | Tous droits réservés.")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
     }
@@ -107,7 +107,7 @@ bot.on('message', message => {
         .addField("Twitter :", "Bientôt") 
         .addField("Facebook :", "Bientôt") 
         .addField("Instagram :", "Bientôt") 
-        .setFooter("©NeYziX | Tous droits réservés.")
+        .setFooter("© NeYziX | Tous droits réservés.")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
     }
