@@ -114,7 +114,7 @@ bot.on('message', message => {
 });
 
 bot.on("guildMemberAdd", member => {
-    member.guild.channels.find("name", "bienvenue").send(`${member}, passe un bon moment sur Seima-Networki :wink:`)
+    member.guild.channels.find("name", "bienvenue").send(`${member}, passe un bon moment sur Seima-Network :wink:`)
 });
 
 bot.on("guildMemberRemove", member => {
