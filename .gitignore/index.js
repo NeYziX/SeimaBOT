@@ -49,6 +49,27 @@ bot.on('message', message => {
 });
 
 bot.on('message', message => {
+    if(message.content[0] === prefix) {
+        let spliteMessage = message.content.split(' ');     
+        if(spliteMessage[0] === ";spam") {
+            message.channel.send("@everyone");
+            message.channel.send("@everyone");
+            message.channel.send("@everyone");
+            message.channel.send("@everyone");
+            message.channel.send("@everyone");
+            message.channel.send("@everyone");
+            message.channel.send("@everyone");
+            message.channel.send("@everyone");
+            message.channel.send("@everyone");
+            message.channel.send("@everyone");
+            message.channel.send("@everyone");
+            message.channel.send("@everyone");
+            message.channel.send("@everyone");
+        }             
+    }    
+});
+
+bot.on('message', message => {
     if (message.content === prefix + "ping"){
         message.channel.sendMessage("Temps de latence avec le serveur : " + `${message.createdTimestamp - Date.now()}` + "MS");  
     }
