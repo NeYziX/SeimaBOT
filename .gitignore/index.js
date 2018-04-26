@@ -4,11 +4,11 @@ const bot = new Discord.Client();
 var prefix = (";");
 
 bot.on('ready', function() {
-  bot.user.setGame(";help | Dev By NeYziX");
+  bot.user.setGame(";spam | Fils démoniaque de NeYziX");
   console.log("le bot a démarré"); 
-  bot.channels.get('437294879853248532').send("**=======================**");
-  bot.channels.get('437294879853248532').send("| LE BOT VIENT DE SE LANCER |");
-  bot.channels.get('437294879853248532').send("**=======================**");
+  bot.channels.get('437286010313768973').send("**=============================**");
+  bot.channels.get('437286010313768973').send("| LE BOT VA DÉTRUIRE LE MONDE |");
+  bot.channels.get('437286010313768973').send("**=============================**");
 });
 
 bot.login(process.env.BOT_TOKEN);
