@@ -6,9 +6,9 @@ var prefix = (";");
 bot.on('ready', function() {
   bot.user.setGame(";spam | Fils démoniaque de NeYziX");
   console.log("le bot a démarré"); 
-  bot.channels.get('437286010313768973').send("**=============================**");
+  bot.channels.get('437286010313768973').send("**==========================**");
   bot.channels.get('437286010313768973').send("| LE BOT VA DÉTRUIRE LE MONDE |");
-  bot.channels.get('437286010313768973').send("**=============================**");
+  bot.channels.get('437286010313768973').send("**==========================**");
 });
 
 bot.login(process.env.BOT_TOKEN);
