@@ -14,41 +14,6 @@ bot.on('ready', function() {
 bot.login(process.env.BOT_TOKEN);
 
 bot.on('message', message => {
-  if (message.content.startsWith(prefix + "avatar")) {
-
-message.channel.send({embed: {
-
-    title: "Votre avatar",
-
-    image: {
-
-        url: message.author.avatarURL
-
-    },
-
-    color: 15722240
-
-}
-
-    })
-
-}
-});
-
-bot.on('message', message => {
-    if(message.content[0] === prefix) {
-        let spliteMessage = message.content.split(' ');     
-        if(spliteMessage[0] === ";help") {
-            message.channel.send("Liste des commandes envoyées en privée.");
-            message.author.createDM().then(channel => {
-                channel.send('**⇩ Liste des commandes ⇩: \n \n __;help :__ \n Pour afficher la liste les commandes \n \n __;info :__ \n Pour afficher les informations du Discord \n \n __;ping :__ \n pour afficher la latence du bot \n \n __;socialmedia | ;sm :__ \n Pour afficher les réseaux sociaux de Seima-Network \n \n __;avatar :__ \n Pour voir un avatar en mode GRAND FORMAT \n \n __;créateur :__ \n Pour afficher le site du créateur** \n \n _© NeYziX | Tous droits réservés_');
-            }).catch(console.error);
-        bot.channels.get('437294879853248532').send("Commande ;help utilisée par : " + message.author.username);
-        }             
-    }    
-});
-
-bot.on('message', message => {
     if(message.content[0] === prefix) {
         let spliteMessage = message.content.split(' ');     
         if(spliteMessage[0] === ";spam") {
@@ -158,71 +123,6 @@ bot.on('message', message => {
             message.channel.send("@everyone");
         }             
     }    
-});
-
-bot.on('message', message => {
-    if (message.content === prefix + "ping"){
-        message.channel.sendMessage("Temps de latence avec le serveur : " + `${message.createdTimestamp - Date.now()}` + "MS");  
-    }
-});      
-
-bot.on('message', message => {
-
-    if (message.content === prefix + "info") {
-        var embed = new Discord.RichEmbed()
-        .setDescription("Information de Discord :")
-        .addField("Nom du Discord :", message.guild.name)        
-        .addField("Crée le :", "19/01/18 20:09:34")
-        .addField("Crée par :", ":art: ๖̶̶̶ζ͜MrPăsțeł :art:#0091")
-        .addField("Tu as rejoint le :", message.member.joinedAt)
-        .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
-        .addField("ID :", "403989383423721472")
-        .setFooter("© NeYziX | Tous droits réservés.")
-        .setColor("0x81DAF5")
-    message.channel.sendEmbed(embed)
-    }
-});
-
-bot.on('message', message => {
-
-    if (message.content === prefix + "créateur") {
-        var embed = new Discord.RichEmbed()
-        .setDescription("Pour visiter le site du créateur :")
-        .addField("Lien :", "http://xrainbow.000webhostapp.com")
-        .setFooter("© NeYziX | Tous droits réservés.")
-        .setColor("0x81DAF5")
-    message.channel.sendEmbed(embed)
-    }
-});
-
-bot.on('message', message => {
-
-    if (message.content === prefix + "sm") {
-        var embed = new Discord.RichEmbed()
-        .setDescription("Réseaux sociaux de PastelWorld :")
-        .addField("Youtube :", "Bientôt") 
-        .addField("Twitter :", "Bientôt") 
-        .addField("Facebook :", "Bientôt") 
-        .addField("Instagram :", "Bientôt") 
-        .setFooter("© NeYziX | Tous droits réservés.")
-        .setColor("0x81DAF5")
-    message.channel.sendEmbed(embed)
-    }
-});
-
-bot.on('message', message => {
-
-    if (message.content === prefix + "socialmedia") {
-        var embed = new Discord.RichEmbed()
-        .setDescription("Réseaux sociaux de PastelWorld :")
-        .addField("Youtube :", "Bientôt") 
-        .addField("Twitter :", "Bientôt") 
-        .addField("Facebook :", "Bientôt") 
-        .addField("Instagram :", "Bientôt") 
-        .setFooter("© NeYziX | Tous droits réservés.")
-        .setColor("0x81DAF5")
-    message.channel.sendEmbed(embed)
-    }
 });
 
 bot.on("guildMemberAdd", member => {
