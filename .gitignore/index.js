@@ -72,7 +72,7 @@ bot.on('message', message => {
         .addField("Tu as rejoint le :", message.member.joinedAt)
         .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
         .setFooter("©NeYziX | Tous droits réservés.")
-        .setColor("0x81DAF5")
+        .setColor("0xFF0000")
     message.channel.sendEmbed(embed)
     }
 });
@@ -84,7 +84,7 @@ bot.on('message', message => {
         .setDescription("Pour visiter le site du créateur :")
         .addField("Lien :", "http://xrainbow.000webhostapp.com")
         .setFooter("©NeYziX | Tous droits réservés.")
-        .setColor("0x81DAF5")
+        .setColor("0x2EFE2E")
     message.channel.sendEmbed(embed)
     }
 });
@@ -96,7 +96,7 @@ bot.on('message', message => {
         .setDescription("Réseaux sociaux de P&C Minecraft :")
         .addField("Instagram :", "...") 
         .setFooter("©NeYziX | Tous droits réservés.")
-        .setColor("0x81DAF5")
+        .setColor("0x0000FF")
     message.channel.sendEmbed(embed)
     }
 });
@@ -108,7 +108,7 @@ bot.on('message', message => {
         .setDescription("Réseaux sociaux de P&C Minecraft :")
         .addField("Instagram :", "...")
         .setFooter("©NeYziX | Tous droits réservés.")
-        .setColor("0x81DAF5")
+        .setColor("0x0000FF")
     message.channel.sendEmbed(embed)
     }
 });
