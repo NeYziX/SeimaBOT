@@ -71,7 +71,6 @@ bot.on('message', message => {
         .addField("Crée par :", "R𝕒𝕒𝕖𝕫𝕖𝕣[ら凡イﾉら]#9781")
         .addField("Tu as rejoint le :", message.member.joinedAt)
         .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
-        .addField("ID :", "431481470234918914")
         .setFooter("©NeYziX | Tous droits réservés.")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
