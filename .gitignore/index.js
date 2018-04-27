@@ -1,475 +1,128 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 
-var prefix = (";");
+var prefix = ("&");
 
 bot.on('ready', function() {
-  bot.user.setGame(";spam | Fils démoniaque de NeYziX");
+  bot.user.setGame("&help | Dev By NeYziX");
   console.log("le bot a démarré"); 
-  bot.channels.get('437286010313768973').send("**==========================**");
-  bot.channels.get('437286010313768973').send("| LE BOT VA DÉTRUIRE LE MONDE |");
-  bot.channels.get('437286010313768973').send("**==========================**");
+  bot.channels.get('439538605380206603').send("**=======================**");
+  bot.channels.get('439538605380206603').send("| LE BOT VIENT DE SE LANCER |");
+  bot.channels.get('439538605380206603').send("**=======================**");
 });
 
 bot.login(process.env.BOT_TOKEN);
 
 bot.on('message', message => {
+  if (message.content.startsWith(prefix + "avatar")) {
+
+message.channel.send({embed: {
+
+    title: "Votre avatar",
+
+    image: {
+
+        url: message.author.avatarURL
+
+    },
+
+    color: 15722240
+
+}
+
+    })
+
+}
+});
+
+bot.on('message', message => {
     if(message.content[0] === prefix) {
-        let spliteMessage = message.content.split(' ');     
-        if(spliteMessage[0] === ";spam") {
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
+        let spliteMessage = message.content.split(' ');
+        if(spliteMessage[0] === "&hello") {
+            message.channel.send("world!");
+            message.author.createDM().then(channel => {
+                channel.send('WORLD!');
+            }).catch(console.error);
+        bot.channels.get('434344990508843011').send("Commande §hello utilisée par : " + message.author.username);
+        }
+      
+        else if(spliteMessage[0] === "&help") {
+            message.channel.send("Liste des commandes envoyées en privée.");
+            message.author.createDM().then(channel => {
+                channel.send('**|!| Bientôt !|!**');
+            }).catch(console.error);
+        bot.channels.get('439538605380206603').send("Commande &help utilisée par : " + message.author.username);
         }             
     }    
 });
 
 bot.on('message', message => {
-    if(message.content[0] === prefix) {
-        let spliteMessage = message.content.split(' ');     
-        if(spliteMessage[0] === ";spam") {
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-        }             
-    }    
+    if (message.content === prefix + "ping"){
+        message.channel.sendMessage("Temps de latence avec le serveur : " + `${message.createdTimestamp - Date.now()}` + "MS");  
+    }
+});      
+
+bot.on('message', message => {
+
+    if (message.content === prefix + "info") {
+        var embed = new Discord.RichEmbed()
+        .setDescription("Information de Discord :")
+        .addField("Nom du Discord :", message.guild.name)        
+        .addField("Crée par :", "Anthony#2439")
+        .addField("Tu as rejoint le :", message.member.joinedAt)
+        .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
+        .addField("ID :", "431481470234918914")
+        .setFooter("©NeYziX | Tous droits réservés.")
+        .setColor("0x81DAF5")
+    message.channel.sendEmbed(embed)
+    }
 });
 
 bot.on('message', message => {
-    if(message.content[0] === prefix) {
-        let spliteMessage = message.content.split(' ');     
-        if(spliteMessage[0] === ";spam") {
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-        }             
-    }    
+
+    if (message.content === prefix + "créateur") {
+        var embed = new Discord.RichEmbed()
+        .setDescription("Pour visiter le site du créateur :")
+        .addField("Lien :", "http://xrainbow.000webhostapp.com")
+        .setFooter("©NeYziX | Tous droits réservés.")
+        .setColor("0x81DAF5")
+    message.channel.sendEmbed(embed)
+    }
 });
 
 bot.on('message', message => {
-    if(message.content[0] === prefix) {
-        let spliteMessage = message.content.split(' ');     
-        if(spliteMessage[0] === ";spam") {
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-            message.channel.send("@everyone");
-        }             
-    }    
+
+    if (message.content === prefix + "sm") {
+        var embed = new Discord.RichEmbed()
+        .setDescription("Réseaux sociaux de P&C Minecraft :")
+        .addField("Instagram :", "...") 
+        .setFooter("©NeYziX | Tous droits réservés.")
+        .setColor("0x81DAF5")
+    message.channel.sendEmbed(embed)
+    }
+});
+
+bot.on('message', message => {
+
+    if (message.content === prefix + "socialmedia") {
+        var embed = new Discord.RichEmbed()
+        .setDescription("Réseaux sociaux de P&C Minecraft :")
+        .addField("Instagram :", "...")
+        .setFooter("©NeYziX | Tous droits réservés.")
+        .setColor("0x81DAF5")
+    message.channel.sendEmbed(embed)
+    }
 });
 
 bot.on("guildMemberAdd", member => {
-    member.guild.channels.find("name", "bienvenue").send(`${member}, passe un bon moment sur Seima-Network :wink:`)
+    member.guild.channels.find("name", "infos-🗞").send(`${member} vient d'arriver ! Souhaité lui la bienvenue :wink:`)
 });
 
 bot.on("guildMemberRemove", member => {
-    member.guild.channels.find("name", "bienvenue").send(`${member} a quitté Seima-Network.`)
+    member.guild.channels.find("name", "infos-🗞").send(`${member} a quitté  **P&C Minecraft**. Nous sommes ravis de t'avoir accueilli :cry:`)
 });
 
 bot.on("guildMemberAdd", member => {
-    var role = member.guild.roles.find('name', 'Joueurs');
+    var role = member.guild.roles.find('name', 'Nouveaux');
     member.addRole(role)
 })
