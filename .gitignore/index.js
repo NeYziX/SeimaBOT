@@ -71,6 +71,7 @@ bot.on('message', message => {
         .addField("Crée par :", "Anthony#2439")
         .addField("Tu as rejoint le :", message.member.joinedAt)
         .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
+        .addField("Émojis :", message.guild.emojis)
         .setFooter("©NeYziX | Tous droits réservés.")
         .setColor("0xFF0000")
     message.channel.sendEmbed(embed)
