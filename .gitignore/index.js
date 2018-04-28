@@ -36,12 +36,6 @@ message.channel.send({embed: {
 });
 
 bot.on('message', message => {
-  if (message.content === 'what is my avatar') {    
-    message.reply(message.author.avatarURL);
-  }
-});
-
-bot.on('message', message => {
     if(message.content[0] === prefix) {
         let spliteMessage = message.content.split(' ');
         if(spliteMessage[0] === "&hello") {
