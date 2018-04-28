@@ -35,7 +35,7 @@ message.channel.send({embed: {
 }
 });
 
-client.on('message', message => {
+bot.on('message', message => {
   if (message.content === 'what is my avatar') {    
     message.reply(message.author.avatarURL);
   }
