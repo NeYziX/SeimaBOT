@@ -92,6 +92,12 @@ bot.on('message', message => {
 });
 
 bot.on('message', message => {
+    if (message.content === "Ok je te tue mon fils !"){
+        message.channel.sendMessage("NON PAPA JE T'AIME JE POURRAIS TUER ANTHONY ET RAAEZER !");  
+    }
+});  
+
+bot.on('message', message => {
     if (message.content === prefix + "ping"){
         message.channel.sendMessage("Temps de latence avec le serveur : " + `${message.createdTimestamp - Date.now()}` + "MS");  
     }
