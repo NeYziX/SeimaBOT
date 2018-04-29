@@ -37,7 +37,9 @@ bot.on('message', message => {
             message.reply(`${member.user.username} a été expulsé avec succès.`).catch(console.error);
             message.guild.channels.find("name", "général-🎮").send(`**${member.user.username}** a été expulsé du discord par **${message.author.username}**`)
         }).catch(console.error)
-        }
+        
+    }
+  
     if (command === "ban") {
         let modRole = message.guild.roles.find("name", "Ban");
         if(!message.member.roles.has(modRole.id)) {
