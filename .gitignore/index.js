@@ -142,8 +142,7 @@ bot.on('message', message => {
             });
             }else{
                 return message.reply("Tu n'as pas les permissions suffisantes.")
-            }}})
-    
+            }};    
 });
 
 bot.on('message', message => {
