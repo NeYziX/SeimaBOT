@@ -35,9 +35,21 @@ bot.on('message', message => {
         }
         kickMember.kick().then(member => {
             message.reply(`${member.user.username} a été expulsé avec succès.`).catch(console.error);
-            message.guild.channels.find("name", "général-🎮").send(`**${member.user.username}** a été expulsé du discord par **${message.author.username}**`).catch(console.error)
+            message.guild.channels.find("name", "général-🎮").send(`**${member.user.username}** a été expulsé du discord par **${message.author.username}**`)
+        }).catch(console.error)
         }
-});                             
+    if (command === "ban") {
+        let modRole = message.guild.roles.find("name", "Ban");
+        if(!message.member.roles.has(modRole.id)) {
+            return message.reply("Erreur !").catch(console.error);
+        }
+        const member = message.mentions.members.first();
+        if (!member) return message.reply("Merci de mentionner l'utilisateur à bannir.");
+        member.ban().then(member => {
+            message.reply(`**${member.user.username}** a été banni avec succès.`).catch(console.error);
+            message.guild.channels.find("name", "général-🎮").send(`**${member.user.username}** a été banni du discord par **${message.author.username}**`)
+        }).catch(console.error)
+}});                             
                                
 bot.on('message', message => {
   if (message.content.startsWith(prefix + "avatar")) {
