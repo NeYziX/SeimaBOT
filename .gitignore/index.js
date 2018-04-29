@@ -125,6 +125,13 @@ bot.on('message', message => {
         .setColor("0xFF0000")
     message.channel.sendEmbed(embed)
     }
+    
+    if (message.content.startsWith(prefix + "sondage")) {
+        if(message.author.id == "373190964757397505")
+            let args = message.content.split(" ").slice(1);
+            let thingToEcho = args.join(" ")
+            var embed = new
+    
 });
 
 bot.on('message', message => {
