@@ -73,7 +73,7 @@ bot.on("message", function(message) {
                 message.channel.fetchMessages()
                     .then(function(list){
                         message.channel.bulkDelete(list);
-                }, function(err){message.channel.send("Erreur")})]
+                }, function(err){message.channel.send("Erreur")})}
             break;
         
     }});     
