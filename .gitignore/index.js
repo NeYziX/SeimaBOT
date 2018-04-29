@@ -64,8 +64,8 @@ bot.on("message", function(message) {
             let reponse = (replys[Math.floor(Math.random() * replys.length)])
             var bembed = new Discord.RichEmbed()
             .setDescription(":8ball: 8ball")
-            .addField("Question :31:", tte)
-            .addField("Réponse :35:", reponse)
+            .addField("Question :thinking:", tte)
+            .addField("Réponse :kissing_heart:", reponse)
         message.channel.sendEmbed(bembed)
         
     }});     
