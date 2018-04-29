@@ -35,6 +35,41 @@ message.channel.send({embed: {
 }
 });
 
+bot.on("message", function(message) {
+    if (message.author.equals(bot.user)) return;
+  
+    if (!message.content.startsWith(prefix)) return;
+  
+    var args = message.content.substring(prefix.length).split(" ");
+
+    switch (args[0].toLowerCase()) {
+        case "roll":
+            var roll = Math.floor(Math.random() * args[1]) +1;
+            if (!roll) return message.reply("Entre un numéro")
+            message.channel.send("Je choisi le numéro " + roll + " !");
+            break;
+        case "8ball":
+        let args = message.content.split(" ").slice(1);
+        let tte = args.join(" ")
+        if (!tte){
+            return message.reply("Merci de poser une question :8ball:")};
+        
+            var replys = [
+                "Oui",
+                "Non",
+                "Je sais pas",
+                "Peut-être"
+            ];
+        
+            let reponse = (replys[Math.floor(Math.random() * replys.length)])
+            var bembed = new Discord.RichEmbed()
+            .setDescription(":8ball: 8ball")
+            .addField("Question", tte)
+            .addField("Réponse", reponse)
+        message.channel.sendEmbed(bembed)
+        
+    }});     
+        
 bot.on('message', message => {
     if(message.content[0] === prefix) {
         let spliteMessage = message.content.split(' ');
