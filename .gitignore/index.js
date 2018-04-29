@@ -66,7 +66,15 @@ bot.on("message", function(message) {
             .setDescription(":8ball: 8ball")
             .addField("Question :thinking:", tte)
             .addField("Réponse :kissing_heart:", reponse)
-        message.channel.sendEmbed(bembed)
+            message.channel.sendEmbed(bembed)
+            break;
+            case "clear":
+            if (message.member.hasPermission("MANAGE_MESSAGES")){
+                message.channel.fetchMessages()
+                    .then(function(list){
+                        message.channel.bulkDelete(list);
+                }, function(err){message.channel.send("Erreur")})]
+            break;
         
     }});     
         
