@@ -92,8 +92,8 @@ bot.on('message', message => {
 });
 
 bot.on('message', message => {
-    if (message.content === "Ok je te tue mon fils !"){
-        message.channel.sendMessage("NON PAPA JE T'AIME JE POURRAIS TUER ANTHONY ET RAAEZER !");  
+    if (message.content === "dsfsdgsdgsdsdfgsdfgsdgksdgfsdgsdgs5g78575"){
+        message.channel.sendMessage("dsfsdgsdgsg");  
     }
 });  
 
