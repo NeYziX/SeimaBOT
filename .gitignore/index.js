@@ -19,7 +19,7 @@ bot.on('message', message => {
     command = args.shift().toLoworCase();
   
     if (command === "kick") {
-        let modRole = message.guild.roles.find("name", "Test");
+        let modRole = message.guild.roles.find("name", "Ban");
         if(!message.member.roles.has(modRole.id)) {
             return message.reply("Erreur : Permission insuffisante !").catch(console.error);
         }
