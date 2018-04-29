@@ -164,11 +164,11 @@ bot.on('message', message => {
 });
 
 bot.on("guildMemberAdd", member => {
-    member.guild.channels.find("name", "infos-🗞").send(`${member} vient d'arriver ! Souhaité lui la bienvenue :wink:`)
+    member.guild.channels.find("name", "infos-🗞").send(`${member} vient d'arriver ! Souhaité lui la bienvenue :wink: \n Nous sommes **{membercount}**`)
 });
 
 bot.on("guildMemberRemove", member => {
-    member.guild.channels.find("name", "infos-🗞").send(`${member} a quitté  **P&C Minecraft**. Nous sommes ravis de t'avoir accueilli :cry:`)
+    member.guild.channels.find("name", "infos-🗞").send(`${member} a quitté  **P&C Minecraft**. Nous sommes ravis de t'avoir accueilli :cry: \n Nous sommes **{membercount}**`)
 });
 
 bot.on("guildMemberAdd", member => {
